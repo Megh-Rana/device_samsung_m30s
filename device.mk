@@ -90,6 +90,10 @@ PRODUCT_PACKAGES += \
     gralloc.universal9611 \
     libion
 
+# Dolby
+PRODUCT_PACKAGES += \
+    SamsungDAP
+
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
