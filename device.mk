@@ -139,6 +139,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
 # Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Keylayout
