@@ -288,6 +288,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi/libbt
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Task profiles
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/task_profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
