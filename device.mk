@@ -19,6 +19,9 @@ DEVICE_PATH := device/samsung/m30s
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/m30s/m30s-vendor.mk)
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Soong namespaces
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
