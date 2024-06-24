@@ -16,8 +16,3 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/m30s.mk
-
-COMMON_LUNCH_CHOICES := \
-    m30s-eng \
-    m30s-user \
-    m30s-userdebug
