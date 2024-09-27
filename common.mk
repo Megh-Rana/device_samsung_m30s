@@ -99,10 +99,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.3.vendor
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
@@ -154,15 +150,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor:64
 
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
-
-# Livedisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
-    
 PRODUCT_PACKAGES += \
     libcrypto-tm \
     libshim_crypto:64 \
@@ -249,7 +236,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.samsung-libperfmgr
+    android.hardware.power-service.pixel-libperfmgr
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -302,10 +289,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
 
 # Update
 AB_OTA_UPDATER := false
