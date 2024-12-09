@@ -71,9 +71,8 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed libssl-tm.so "${2}"
             "${PATCHELF}" --add-needed libshim_crypto.so "${2}"
             ;;
-        vendor/lib*/libwvhidl.so)
-            "${PATCHELF}" --replace-needed libprotobuf-cpp-lite-3.9.1.so libprotobuf-cpp-full-3.9.1.so "${2}"
-            "${PATCHELF}" --replace-needed libcrypto.so libcrypto-tm.so "${2}"
+        vendor/lib/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
             ;;
         vendor/lib*/sensors.*.so)
             "${PATCHELF}" --remove-needed libhidltransport.so "${2}"
