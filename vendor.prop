@@ -86,6 +86,9 @@ ro.vendor.vibrator_hal.click_duration=50
 ro.vendor.vibrator_hal.tick_duration=45
 ro.vendor.vibrator_hal.texture_tick_duration=30
 
+## Perf
+vendor.perf.framepacing.enable=1
+
 ## RIL
 ro.carrier=unknown
 ro.radio.noril=no
