@@ -32,7 +32,8 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 ## Audio
-BOARD_LOW_LATENCY_CAPTURE_DURATION := 20
+$(call soong_config_set,exynos_audio,PREDEFINED_LOW_CAPTURE_DURATION,20)
+$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/m30s:libaudioproxy)
 
 ## Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
