@@ -63,7 +63,7 @@ $(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
 SOONG_CONFIG_samsungCameraVars += extra_ids
-SOONG_CONFIG_samsungCameraVars_extra_ids := 4,20,23,50,52,54
+SOONG_CONFIG_samsungCameraVars_extra_ids := 20,23,50,52
 
 BOARD_HWJPEG_ANDROID_VERSION := 11
 
