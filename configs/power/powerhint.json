@@ -5,6 +5,7 @@
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
                 "2314000",
+                "2106000",
                 "-1"
             ],
             "ResetOnInit": true
@@ -18,8 +19,8 @@
                 "1976000",
                 "1664000",
                 "1456000",
-		"1248000",
-		"1144000",
+		        "1248000",
+		        "1144000",
                 "0"
             ],
             "ResetOnInit": true
@@ -40,6 +41,25 @@
             "Values": [
                 "always_on",
                 "coarse_demand"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "TASchedtuneBoost",
+            "Path": "/dev/stune/top-app/schedtune.boost",
+            "Values": [
+                "30",
+                "5"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUMinFreq",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
+            "Values": [
+                "764000",
+                "455000",
+                "260000"
             ],
             "ResetOnInit": true
         },
@@ -80,9 +100,54 @@
                 "0"
             ],
             "ResetOnInit": true
-        }
+        },
+        {
+            "Name": "PowerHALMainState",
+            "Path": "vendor.powerhal.state",
+            "Values": [
+              "SUSTAINED_PERFORMANCE",
+              ""
+            ],
+            "Type": "Property"
+          }
     ],
     "Actions": [
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "PowerHALMainState",
+            "Duration": 0,
+            "Value": "SUSTAINED_PERFORMANCE"
+        },
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "CPUMaxFreq",
+            "Duration": 0,
+            "Value": "2106000"
+        },
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "CPUMinFreq",
+            "Duration": 0,
+            "Value": "1456000"
+        },
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "455000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "TASchedtuneBoost",
+            "Duration": 0,
+            "Value": "30"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "455000"
+        },
         {
             "PowerHint": "LAUNCH",
             "Node": "CPUMaxFreq",
@@ -115,9 +180,9 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUMinFreq",
+            "Node": "GPUPowerPolicy",
             "Duration": 1000,
-            "Value": "2314000"
+            "Value": "always_on"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
@@ -176,13 +241,13 @@
         {
             "PowerHint": "INTERACTIVE",
             "Node": "CPUMaxFreq",
-            "Duration": 1000,
+            "Duration": 5000,
             "Value": "2314000"
         },
         {
             "PowerHint": "INTERACTIVE",
             "Node": "CPUMinFreq",
-            "Duration": 1000,
+            "Duration": 5000,
             "Value": "1976000"
         },
         {
@@ -190,6 +255,18 @@
             "Node": "DoubleTapToWakeEnable",
             "Duration": 0,
             "Value": "aot_enable,1"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "764000"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUPowerPolicy",
+            "Duration": 0,
+            "Value": "always_on"
         }
     ]
 }
