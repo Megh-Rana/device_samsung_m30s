@@ -157,6 +157,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
+$(call soong_config_set,cbd,protocol,sipc)
+$(call soong_config_set,cbd,use_legacy_sipc_ioctl,true)
 
 # Security
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
