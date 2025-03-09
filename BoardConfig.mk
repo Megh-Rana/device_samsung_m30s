@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilts/dtbo.img:$(TARGET_COPY_OUT)/dtbo.img
 
 # Keymaster
-TARGET_KEYMASTER_VARIANT := samsung
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/m30s:libskeymaster4device)
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
