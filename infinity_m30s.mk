@@ -30,14 +30,28 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := m30s
-PRODUCT_NAME := m30s
+PRODUCT_NAME := infinity_m30s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-m307f
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Infinity-X stuff
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := NotDheeraj06
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+PRODUCT_SYSTEM_PROPERTIES  += \
+	ro.product.marketname=Samsung M30s \
+	ro.infinity.soc=Exynos® 9611 \
+	ro.infinity.battery=6000 mAh \
+	ro.infinity.display=6.4″, 60Hz, 2340x1080 \
+	ro.infinity.camera=48MP + 8MP + 5MP

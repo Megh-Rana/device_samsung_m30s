@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/m30s.mk
+    $(LOCAL_DIR)/infinity_m30s.mk
