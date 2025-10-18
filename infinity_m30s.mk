@@ -48,10 +48,3 @@ INFINITY_MAINTAINER := NotDheeraj06
 TARGET_SUPPORTS_BLUR := true
 WITH_GAPPS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-
-PRODUCT_SYSTEM_PROPERTIES  += \
-	ro.product.marketname=Samsung M30s \
-	ro.infinity.soc=Exynos® 9611 \
-	ro.infinity.battery=6000 mAh \
-	ro.infinity.display=6.4″, 60Hz, 2340x1080 \
-	ro.infinity.camera=48MP + 8MP + 5MP

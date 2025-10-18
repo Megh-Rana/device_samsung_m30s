@@ -146,6 +146,7 @@ include hardware/samsung_slsi-linaro/config/BoardConfig9611.mk
 
 ## Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
 #BOARD_INCLUDE_RECOVERY_DTBO := true
