@@ -30,21 +30,14 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 
 ## Inherit some common Lineage stuff
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/mica/config/common_full_phone.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := m30s
-PRODUCT_NAME := infinity_m30s
+PRODUCT_NAME := mica_m30s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-m307f
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
-# Infinity-X stuff
-INFINITY_BUILD_TYPE := OFFICIAL
-INFINITY_MAINTAINER := NotDheeraj06
-TARGET_SUPPORTS_BLUR := true
-WITH_GAPPS := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
