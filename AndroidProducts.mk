@@ -15,4 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mica_m30s.mk
+    $(LOCAL_DIR)/mica_m30s.mk \
+    $(LOCAL_DIR)/lineage_m30s.mk
