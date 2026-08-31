@@ -273,6 +273,15 @@ PRODUCT_PACKAGES += \
     libnetutils.vendor:64 \
     libsqlite.vendor:64
 
+# AOSP userspace IMS and framework bearer services
+$(call inherit-product, packages/modules/ImsMedia/imsmedia.mk)
+$(call soong_config_set,imsstack_namespace,use_carrier_config_ext,true)
+
+PRODUCT_PACKAGES += \
+    ImsStack \
+    Iwlan \
+    QualifiedNetworksService
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
@@ -290,7 +299,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
-    hardware/samsung_slsi/libbt
+    hardware/samsung_slsi/libbt \
+    vendor/lineage/imsstack-carrier-config-ext
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
